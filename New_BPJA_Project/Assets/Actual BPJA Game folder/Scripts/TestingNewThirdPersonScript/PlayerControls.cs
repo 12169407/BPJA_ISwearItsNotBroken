@@ -20,52 +20,30 @@ public class PlayerControls: MonoBehaviour
     {
         //change player animations to current player animations
 
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
         {
-            playerAnim.SetInteger("Walk", 1);
+            //playerAnim.SetInteger("Walk", 1);
             speed = 3.0f;
         }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Mouse1))
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
-            playerAnim.SetInteger("Walk", 2);
+            //playerAnim.SetInteger("Run", 2);
             speed = 6.0f;
-        }
-        else
-        {
-            playerAnim.SetInteger("Walk", 0);
-        }
-
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            playerAnim.SetInteger("Attack", 1);
-        }
-        else
-        {
-            playerAnim.SetInteger("Attack", 0);
-        }
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            playerAnim.SetInteger("Defend", 1);
-        }
-        else
-        {
-            playerAnim.SetInteger("Defend", 0);
         }
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
         if (death)
         {
-            playerAnim.SetInteger("Death", 1);
+            //playerAnim.SetInteger("Death", 1);
         }
         if (!death)
         {
+            //GetComponent<Rigidbody>().AddForce(Vector3.forward * Time.deltaTime * speed * forwardInput);
+
             transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
             transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         }
 
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
     }
 }

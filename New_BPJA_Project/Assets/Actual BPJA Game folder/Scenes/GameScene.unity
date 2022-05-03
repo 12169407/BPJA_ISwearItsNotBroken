@@ -456,6 +456,54 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9565735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Size.y
+      value: 4.1308746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Size.z
+      value: 5.326599
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Center.x
+      value: -0.10069275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Center.y
+      value: -0.024757385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194188, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Center.z
+      value: 0.5104675
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361004636526194227, guid: 4363ab707ba292148a707371308d6b14, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466864895153985478, guid: 4363ab707ba292148a707371308d6b14, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.70535564
@@ -662,13 +710,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026825132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.18, z: -6.6}
+  m_LocalRotation: {x: 0.29391617, y: -0, z: -0, w: 0.9558313}
+  m_LocalPosition: {x: 0, y: 7.78, z: -4.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 876606690}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.185, y: 0, z: 0}
 --- !u!114 &1026825136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,7 +741,6 @@ GameObject:
   - component: {fileID: 1241538443}
   - component: {fileID: 1241538442}
   - component: {fileID: 1241538441}
-  - component: {fileID: 1241538444}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -759,20 +806,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1241538444
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241538440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1001 &1400613417
 PrefabInstance:
   m_ObjectHideFlags: 0
