@@ -297,15 +297,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.16666667
         value: {x: -0.05, y: 3.82, z: 3.49}
-        inSlope: {x: 0, y: -32.4, z: 21.000002}
-        outSlope: {x: 0, y: -32.4, z: 21.000002}
+        inSlope: {x: 0, y: -44.914295, z: 27.685719}
+        outSlope: {x: 0, y: -44.914295, z: 27.685719}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: -0.05, y: 1.35, z: 4.5}
+        value: {x: -0.05, y: -0.87, z: 5.28}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -560,15 +560,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.16666667
         value: 3.82
-        inSlope: -32.4
-        outSlope: -32.4
+        inSlope: -44.914295
+        outSlope: -44.914295
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 1.35
+        value: -0.87
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -624,15 +624,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.16666667
         value: 3.49
-        inSlope: 21.000002
-        outSlope: 21.000002
+        inSlope: 27.685719
+        outSlope: 27.685719
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 4.5
+        value: 5.28
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1516,4 +1516,11 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.25
+    functionName: stopAnimation
+    data: vertSlash
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

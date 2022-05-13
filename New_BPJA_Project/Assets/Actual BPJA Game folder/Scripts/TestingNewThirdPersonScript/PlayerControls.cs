@@ -45,23 +45,34 @@ public class PlayerControls: MonoBehaviour
 
             transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         }
-        if(Input.GetKey(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             randomNum = Random.Range(1, 4);
             if(randomNum == 1)
             {
                 playerAnim.SetInteger("thrust", 1);
+                //stopAnimation("thrust");
+               // playerAnim.SetInteger("stop", 6);
             }
             if (randomNum == 2)
             {
                 playerAnim.SetInteger("vertSlash", 2);
+                //stopAnimation("vertSlash");
+                //playerAnim.SetInteger("stop", 6);
             }
             if (randomNum == 3)
             {
                 playerAnim.SetInteger("horizSlash", 3);
+               // stopAnimation("horizSlash");
+                //playerAnim.SetInteger("stop", 6);
             }
         }
+        
 
+    }
+    public void stopAnimation(string anim)
+    {
+        playerAnim.SetInteger(anim, 0);
 
     }
 }
