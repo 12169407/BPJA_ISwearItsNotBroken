@@ -10,6 +10,7 @@ public class PlayerControls: MonoBehaviour
     private float forwardInput;
     private Animator playerAnim;
     public bool death;
+    private int randomNum;
 
     private void Start()
     {
@@ -19,15 +20,15 @@ public class PlayerControls: MonoBehaviour
     void Update()
     {
         //change player animations to current player animations
-
+        
         if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
         {
-            //playerAnim.SetInteger("Walk", 1);
+            playerAnim.SetInteger("walk", 5);
             speed = 3.0f;
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
-            //playerAnim.SetInteger("Run", 2);
+            playerAnim.SetInteger("run", 4);
             speed = 6.0f;
         }
         horizontalInput = Input.GetAxis("Horizontal");
@@ -38,12 +39,29 @@ public class PlayerControls: MonoBehaviour
         }
         if (!death)
         {
-            //GetComponent<Rigidbody>().AddForce(Vector3.forward * Time.deltaTime * speed * forwardInput);
+            GetComponent<Rigidbody>().AddForce(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
             transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
             transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         }
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            randomNum = Random.Range(1, 4);
+            if(randomNum == 1)
+            {
+                playerAnim.SetInteger("thrust", 1);
+            }
+            if (randomNum == 2)
+            {
+                playerAnim.SetInteger("vertSlash", 2);
+            }
+            if (randomNum == 3)
+            {
+                playerAnim.SetInteger("horizSlash", 3);
+            }
+        }
+
 
     }
 }
