@@ -11,9 +11,12 @@ public class PlayerControls: MonoBehaviour
     private Animator playerAnim;
     public bool death;
     private int randomNum;
-
+    public int maxHealth = 5;
+    public int currentHealth;
+    public HealthBar healthBar;
     private void Start()
     {
+        currentHealth = maxHealth;
         playerAnim = GetComponent<Animator>();
     }
     // Update is called once per frame
