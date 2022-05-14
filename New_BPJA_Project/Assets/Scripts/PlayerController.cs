@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     private float forwardInput;
     private Animator playerAnim;
     public bool death;
+    public int maxHealth = 5;
+    public int currentHealth;
 
     private void Start()
     {
+        currentHealth = maxHealth;
         playerAnim = GetComponent<Animator>();
     }
     // Update is called once per frame
@@ -65,7 +68,8 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+
+    }
 }

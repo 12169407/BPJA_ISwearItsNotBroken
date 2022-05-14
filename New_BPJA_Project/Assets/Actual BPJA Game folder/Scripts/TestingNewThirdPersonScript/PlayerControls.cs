@@ -14,8 +14,10 @@ public class PlayerControls: MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject enemy;
     private void Start()
     {
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
         currentHealth = maxHealth;
         playerAnim = GetComponent<Animator>();
     }
@@ -31,7 +33,7 @@ public class PlayerControls: MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
-            playerAnim.SetInteger("run", 4);
+            playerAnim.SetInteger("walk", 6);
             speed = 6.0f;
         }
         horizontalInput = Input.GetAxis("Horizontal");
@@ -77,5 +79,14 @@ public class PlayerControls: MonoBehaviour
     {
         playerAnim.SetInteger(anim, 0);
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")) ;
+        {
+            currentHealth--;
+            playerAnim.SetBool("hit", true);
+
+        }
     }
 }
