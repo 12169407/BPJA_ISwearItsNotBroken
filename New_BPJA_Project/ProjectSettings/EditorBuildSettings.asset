@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Actual BPJA Game folder/Scenes/GameScene.unity
     guid: 1f11d1991ba7fad48acaca541d68aac8
+  - enabled: 1
+    path: Assets/Scenes/Dead.unity
+    guid: e20a247caede0184a9aef8e24a2311d5
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 8027c57e7f758d74e811bce6ad70e8c2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2eb4a51334f8d624e98942659d204d6c, type: 2}

@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
         if(enemyHealth <= 0)
         {
             Destroy(enemy);
+
         }
     }
 
@@ -46,8 +47,7 @@ public class EnemyController : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             enemyAnim.SetInteger("attackWolf", 3);
-           // GameObject.Find("player").GetComponent<PlayerControls>().currentHealth--;
-            //GameObject.Find("player").GetComponent<PlayerControls>().playerAnim.SetInteger("hit",1);
+            Debug.Log("player hit");
         }
     }
     public void stopAnimation(string anim)

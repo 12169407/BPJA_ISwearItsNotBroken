@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour
 
 	public Slider slider;
 	public Gradient gradient;
-	private Image fill;
+	public Image fill;
 
 	public void SetMaxHealth(int health)
 	{

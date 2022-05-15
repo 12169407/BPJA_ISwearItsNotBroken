@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerControls: MonoBehaviour
 {
-    public Animator playerAnim;
+    private Animator playerAnim;
 
     private float speed = 10.0f;
     private float turnSpeed = 150.0f;
@@ -15,7 +17,7 @@ public class PlayerControls: MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
 
-    private HealthBar healthBar;
+    public HealthBar healthBar;
 
     private GameObject enemy;
     public GameObject healthPotion;
@@ -26,14 +28,14 @@ public class PlayerControls: MonoBehaviour
         //finds the game objects, animators, and sets the health
         healthPotion = GameObject.FindGameObjectWithTag("Health");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
-        currentHealth = 2;
+        currentHealth = maxHealth;
         playerAnim = GetComponent<Animator>();
+        healthBar.SetHealth(maxHealth);
     }
     // Update is called once per frame
     void Update()
     {
         //change player animations to current player animations
-        
         if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
         {
             playerAnim.SetInteger("walk", 5);
@@ -46,9 +48,10 @@ public class PlayerControls: MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
-        if (death)
+        if (currentHealth <= 0)
         {
-            //playerAnim.SetInteger("Death", 1);
+            death = true;
+            SceneManager.LoadScene("Dead");
         }
         if (!death)
         {
@@ -93,8 +96,15 @@ public class PlayerControls: MonoBehaviour
         if (collision.collider.CompareTag("Health")) 
         {
             currentHealth++;
+            healthBar.SetHealth(currentHealth);
             Destroy(healthPotion);
         }
       
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            currentHealth--;
+            healthBar.SetHealth(currentHealth);
+            playerAnim.SetInteger("hit", 1);
+        }
     }
 }

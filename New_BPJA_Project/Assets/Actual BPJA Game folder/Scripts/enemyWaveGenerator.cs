@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyWaveGenerator : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    private float spawnDelay = 2;
+    private float spawnDelay = 5;
     private float interval = 2.0f;
     private float spawnNum;
     public bool readyToSpawn = false;
@@ -21,7 +21,7 @@ public class enemyWaveGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnNum >= 50)
+        if(spawnNum >= 15)
         {
             CancelInvoke();
         }
