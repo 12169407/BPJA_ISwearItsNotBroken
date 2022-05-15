@@ -9,6 +9,9 @@ TagManager:
   - health
   - Sword
   - Health
+  - start
+  - EnemySpawner
+  - player
   layers:
   - Default
   - TransparentFX

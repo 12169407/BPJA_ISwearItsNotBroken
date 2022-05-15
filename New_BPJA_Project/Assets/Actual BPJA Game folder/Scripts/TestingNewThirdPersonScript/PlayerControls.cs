@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class PlayerControls: MonoBehaviour
 {
+    public Animator playerAnim;
+
     private float speed = 10.0f;
     private float turnSpeed = 150.0f;
     private float horizontalInput;
     private float forwardInput;
-    private Animator playerAnim;
     public bool death;
     private int randomNum;
     public int maxHealth = 5;
     public int currentHealth;
-    public HealthBar healthBar;
-    public GameObject enemy;
+
+    private HealthBar healthBar;
+
+    private GameObject enemy;
+    public GameObject healthPotion;
+
+
     private void Start()
     {
+        //finds the game objects, animators, and sets the health
+        healthPotion = GameObject.FindGameObjectWithTag("Health");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
-        currentHealth = maxHealth;
+        currentHealth = 2;
         playerAnim = GetComponent<Animator>();
     }
     // Update is called once per frame
@@ -82,11 +90,11 @@ public class PlayerControls: MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy")) ;
+        if (collision.collider.CompareTag("Health")) 
         {
-            currentHealth--;
-            playerAnim.SetBool("hit", true);
-
+            currentHealth++;
+            Destroy(healthPotion);
         }
+      
     }
 }
