@@ -18,15 +18,7 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (player.transform.position.z >= 206)
-        {
-            enemySpawner.GetComponent<enemyWaveGenerator>().readyToSpawn = true;
-            Debug.Log("game has begun!!!!");
-            playerAudio.Stop();
-            playerAudio.PlayOneShot(playerBkgrnd, 1.0f);
-        }
-        */
+
     }
     private void OnTriggerEnter(Collider other)
     {

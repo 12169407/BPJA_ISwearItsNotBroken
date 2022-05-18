@@ -102,12 +102,6 @@ public class PlayerControls: MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Health")) 
-        {
-            currentHealth++;
-            healthBar.SetHealth(currentHealth);
-            Destroy(healthPotion);
-        }
       
         if (collision.collider.CompareTag("Enemy"))
         {
