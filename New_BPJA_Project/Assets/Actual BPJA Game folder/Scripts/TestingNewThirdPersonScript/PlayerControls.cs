@@ -26,6 +26,7 @@ public class PlayerControls: MonoBehaviour
     public AudioClip swoosh1;
     public AudioClip swoosh2;
     public AudioClip swoosh3;
+    public AudioClip enemHurt;
     public AudioClip chickenHurt;
 
 
