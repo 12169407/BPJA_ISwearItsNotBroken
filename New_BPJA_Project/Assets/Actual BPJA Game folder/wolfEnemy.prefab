@@ -410,6 +410,7 @@ MonoBehaviour:
   speed: -3
   enemyHealth: 3
   enemHurt: {fileID: 8300000, guid: d79007459bcbbcd4eaf31a738fc52040, type: 3}
+  dropHealth: {fileID: 331475927636312455, guid: b3d6806a3b774354f926e01538b74ed7, type: 3}
 --- !u!1 &1176709561130760255
 GameObject:
   m_ObjectHideFlags: 0
