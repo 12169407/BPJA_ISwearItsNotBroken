@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     private Animator enemyAnim;
     private GameObject enemy;
     public int enemyHealth = 2;
+    public AudioClip enemHurt;
+
 
     void Start()
     {
@@ -37,6 +39,7 @@ public class EnemyController : MonoBehaviour
         if (collision.collider.CompareTag("Sword"))
         {
             enemyAnim.SetInteger("hurtWolf", 4);
+            player.GetComponent<PlayerControls>().soundfx.PlayOneShot(enemHurt, 1.0f);
             enemyHealth--;
         }
         else

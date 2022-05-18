@@ -409,6 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   enemyHealth: 3
+  enemHurt: {fileID: 8300000, guid: d79007459bcbbcd4eaf31a738fc52040, type: 3}
 --- !u!1 &1176709561130760255
 GameObject:
   m_ObjectHideFlags: 0

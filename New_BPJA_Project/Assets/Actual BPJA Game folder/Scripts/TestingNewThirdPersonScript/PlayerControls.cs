@@ -22,6 +22,11 @@ public class PlayerControls: MonoBehaviour
     private GameObject enemy;
     public GameObject healthPotion;
 
+    public AudioSource soundfx;
+    public AudioClip swoosh1;
+    public AudioClip swoosh2;
+    public AudioClip swoosh3;
+    public AudioClip chickenHurt;
 
 
     private void Start()
@@ -68,19 +73,22 @@ public class PlayerControls: MonoBehaviour
             if(randomNum == 1)
             {
                 playerAnim.SetInteger("thrust", 1);
+                soundfx.PlayOneShot(swoosh1, 1.0f);
                 //stopAnimation("thrust");
                // playerAnim.SetInteger("stop", 6);
             }
             if (randomNum == 2)
             {
                 playerAnim.SetInteger("vertSlash", 2);
+                soundfx.PlayOneShot(swoosh3, 1.0f);
                 //stopAnimation("vertSlash");
                 //playerAnim.SetInteger("stop", 6);
             }
             if (randomNum == 3)
             {
                 playerAnim.SetInteger("horizSlash", 3);
-               // stopAnimation("horizSlash");
+                soundfx.PlayOneShot(swoosh2, 1.0f);
+                // stopAnimation("horizSlash");
                 //playerAnim.SetInteger("stop", 6);
             }
         }
