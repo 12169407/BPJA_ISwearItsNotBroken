@@ -12,6 +12,7 @@ TagManager:
   - start
   - EnemySpawner
   - player
+  - GameManager
   layers:
   - Default
   - TransparentFX

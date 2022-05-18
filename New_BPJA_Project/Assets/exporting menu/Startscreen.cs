@@ -7,9 +7,11 @@ public class Startscreen : MonoBehaviour
 {
 
     // Start is called before the first frame update
+    public AudioClip startMenu;
+    public AudioSource source;
     void Start()
     {
-
+        source.PlayOneShot(startMenu, 1.0f);
     }
 
     // Update is called once per frame

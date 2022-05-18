@@ -14,13 +14,14 @@ public class PlayerControls: MonoBehaviour
     private float forwardInput;
     public bool death;
     private int randomNum;
-    public int maxHealth = 5;
+    public int maxHealth = 20;
     public int currentHealth;
 
     public HealthBar healthBar;
 
     private GameObject enemy;
     public GameObject healthPotion;
+
 
 
     private void Start()
@@ -83,7 +84,6 @@ public class PlayerControls: MonoBehaviour
                 //playerAnim.SetInteger("stop", 6);
             }
         }
-        
 
     }
     public void stopAnimation(string anim)

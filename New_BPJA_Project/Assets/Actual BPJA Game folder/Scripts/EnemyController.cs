@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     private Transform player;
     private Animator enemyAnim;
     private GameObject enemy;
-    public int enemyHealth = 3;
+    public int enemyHealth = 2;
 
     void Start()
     {
