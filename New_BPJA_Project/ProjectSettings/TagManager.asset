@@ -7,6 +7,12 @@ TagManager:
   - ground
   - Enemy
   - health
+  - Sword
+  - Health
+  - start
+  - EnemySpawner
+  - player
+  - GameManager
   layers:
   - Default
   - TransparentFX
