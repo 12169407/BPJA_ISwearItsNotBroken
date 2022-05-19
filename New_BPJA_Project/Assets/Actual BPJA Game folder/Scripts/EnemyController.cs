@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
         transform.Translate(localPosition.x * Time.deltaTime * speed, localPosition.y * Time.deltaTime * speed, localPosition.z * Time.deltaTime * speed);
         transform.LookAt(player);
         enemyAnim.SetInteger("runWolf",1);
+
         if(enemyHealth <= 0)
         {
             Vector3 spawnLoc = new Vector3(enemPos.transform.position.x, enemPos.transform.position.y, enemPos.transform.position.z);
@@ -41,8 +42,8 @@ public class EnemyController : MonoBehaviour
             {
                 Instantiate(dropHealth,spawnLoc, dropHealth.transform.rotation);
             }
-            Destroy(enemy);
 
+            Destroy(gameObject);
         }
     }
 
