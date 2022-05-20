@@ -103,6 +103,7 @@ public class bossController : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(dieParticles, transform.position, transform.rotation);
+        SceneManager.LoadScene("EndMenu");
 
         
     }
