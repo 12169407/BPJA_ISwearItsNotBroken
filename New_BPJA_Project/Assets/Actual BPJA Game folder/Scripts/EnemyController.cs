@@ -12,8 +12,6 @@ public class EnemyController : MonoBehaviour
     public int enemyHealth = 2;
     public AudioClip enemHurt;
     public GameObject dropHealth;
-    private int numDroppedHealth;
-    public int chanceOfHealth;
 
 
 
@@ -44,7 +42,6 @@ public class EnemyController : MonoBehaviour
                 Instantiate(dropHealth,spawnLoc, dropHealth.transform.rotation);
             }
             */
-            chanceOfHealth = Random.Range(1, 3);
             Destroy(gameObject);
             Debug.Log("enemy dead? nani?");
         }

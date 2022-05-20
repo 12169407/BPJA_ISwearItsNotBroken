@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class enemyWaveGenerator : MonoBehaviour
 {
@@ -21,9 +23,10 @@ public class enemyWaveGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnNum >= 15)
+        if(spawnNum >= 10)
         {
             CancelInvoke();
+            SceneManager.LoadScene("Boss testing scene");
         }
     }
 
