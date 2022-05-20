@@ -14,7 +14,7 @@ public class bossController : MonoBehaviour
     public Transform target;
     public GameObject dieParticles;
     public Image healthbar;
-
+    private int randNum01;
 
     // Start is called before the first frame update
     void Start()
@@ -56,12 +56,27 @@ public class bossController : MonoBehaviour
         if(distance <= meleeDistance)
         {
             //attack melee
-            anim.SetTrigger("melee");
+            randNum01 = Random.Range(1,4);
+            if(randNum01 == 1)
+            {
+                anim.SetTrigger("melee");
+            }
+            if (randNum01 == 2)
+            {
+                anim.SetTrigger("radial");
+            }
+            if (randNum01 == 3)
+            {
+                anim.SetTrigger("overdrive");
+            }
+
+            
         }
         else
         {
             //attack rangw
             anim.SetTrigger("range");
+
         }
 
     }
