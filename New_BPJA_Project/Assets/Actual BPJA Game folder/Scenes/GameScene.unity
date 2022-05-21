@@ -479,6 +479,7 @@ VFXRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -534,7 +535,7 @@ VisualEffect:
       m_Array: []
     m_NamedObject:
       m_Array:
-      - m_Value: {fileID: 2800000, guid: 26c25c072533f574db276072ee85fb4e, type: 3}
+      - m_Value: {fileID: 2800000, guid: b4b0890f063e2e5458d7c50d93a85343, type: 3}
         m_Name: flame texture
         m_Overridden: 0
     m_Bool:
