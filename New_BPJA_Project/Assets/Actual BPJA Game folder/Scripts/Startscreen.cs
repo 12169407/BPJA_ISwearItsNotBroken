@@ -24,6 +24,18 @@ public class Startscreen : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void Training()
+    {
+        SceneManager.LoadScene("Training");
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
     public void OpenOptions()
     {
 

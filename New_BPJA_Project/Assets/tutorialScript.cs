@@ -6,19 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class tutorialScript : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    private float spawnDelay = 5;
-    private float interval = 2.0f;
-    private float spawnNum;
-    public int spawnLimit;
-    public bool readyToSpawn = false;
-    public float x;
-    public float y;
-    public float z;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", spawnDelay, interval);
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -26,14 +18,12 @@ public class tutorialScript : MonoBehaviour
     {
      
     }
-
-    void Spawn()
+    private void OnCollisionEnter(Collision collision)
     {
-        Vector3 spwnloc = new Vector3(x, y, z);
-        if (readyToSpawn)
+        if(collision.collider.CompareTag("Player"))
         {
-            Instantiate(enemyPrefab, spwnloc, enemyPrefab.transform.rotation);
-            spawnNum++;
+            SceneManager.LoadScene("StartMenu");
         }
     }
+
 }

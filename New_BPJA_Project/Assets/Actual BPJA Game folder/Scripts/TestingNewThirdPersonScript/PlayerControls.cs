@@ -43,6 +43,7 @@ public class PlayerControls: MonoBehaviour
         healthPoint = maxHealthPoint;
         playerAnim = GetComponent<Animator>();
         healthBar.SetHealth(maxHealth);
+        UpdateHealthPoints(maxHealthPoint);
     }
     // Update is called once per frame
     void Update()
