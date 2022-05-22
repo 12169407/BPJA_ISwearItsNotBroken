@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class enemyWaveGenerator : MonoBehaviour
+public class tutorialScript : MonoBehaviour
 {
     public GameObject enemyPrefab;
     private float spawnDelay = 5;
@@ -24,20 +24,16 @@ public class enemyWaveGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnNum >= spawnLimit)
-        {
-            CancelInvoke();
-            SceneManager.LoadScene("Boss testing scene");
-        }
+     
     }
 
     void Spawn()
     {
-        Vector3 spwnloc = new Vector3(x,y,z);
-        if(readyToSpawn)
+        Vector3 spwnloc = new Vector3(x, y, z);
+        if (readyToSpawn)
         {
             Instantiate(enemyPrefab, spwnloc, enemyPrefab.transform.rotation);
-            spawnNum++; 
+            spawnNum++;
         }
     }
 }
