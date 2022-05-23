@@ -27,7 +27,6 @@ public class enemyWaveGenerator : MonoBehaviour
         if(spawnNum >= spawnLimit)
         {
             CancelInvoke();
-            SceneManager.LoadScene("Boss testing scene");
         }
     }
 

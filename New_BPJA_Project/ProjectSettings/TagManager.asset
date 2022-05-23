@@ -13,6 +13,7 @@ TagManager:
   - EnemySpawner
   - player
   - GameManager
+  - Boss
   layers:
   - Default
   - TransparentFX
