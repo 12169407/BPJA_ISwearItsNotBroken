@@ -13,7 +13,7 @@ public class game : MonoBehaviour
     void Start()
     {
         portal = GameObject.FindGameObjectWithTag("Portal");
-        //portal.SetActive(false);
+        portal.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner");
     }

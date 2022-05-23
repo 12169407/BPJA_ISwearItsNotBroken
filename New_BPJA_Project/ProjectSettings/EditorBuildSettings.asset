@@ -17,14 +17,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: eae6c712c1ea2cb43a7daa37c7bdf59f
-  - enabled: 1
-    path: Assets/Actual BPJA Game folder/Boss testing scene.unity
-    guid: 5ff3531a8639cb348967ef823dafa20b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Actual BPJA Game folder/Scenes/Tutorial.unity
     guid: a29848c6cbdc245439fd7641ab34b8bc
   - enabled: 1
     path: Assets/Actual BPJA Game folder/Scenes/Training.unity
     guid: 638b9d58b8c98cf43909aabceac8e3d1
+  - enabled: 1
+    path: Assets/Actual BPJA Game folder/Scenes/Boss testing scene.unity
+    guid: 24e4d549afc146743a46c1a6eaa801b3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2eb4a51334f8d624e98942659d204d6c, type: 2}

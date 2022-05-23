@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     public int enemyHealth = 2;
     public AudioClip enemHurt;
     public GameObject dropHealth;
+    private int randNum;
 
 
 
@@ -34,16 +35,12 @@ public class EnemyController : MonoBehaviour
 
         if(enemyHealth <= 0)
         {
-            /*
-            Vector3 spawnLoc = new Vector3(enemPos.transform.position.x, enemPos.transform.position.y, enemPos.transform.position.z);
-            
-            if(chanceOfHealth == 1)
+            randNum = Random.Range(1,4);
+            if(randNum == 1)
             {
-                Instantiate(dropHealth,spawnLoc, dropHealth.transform.rotation);
+                player.GetComponent<PlayerControls>().healthPoint++;
             }
-            */
             Destroy(gameObject);
-            Debug.Log("enemy dead? nani?");
         }
     }
 

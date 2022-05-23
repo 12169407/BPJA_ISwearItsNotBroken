@@ -37,6 +37,7 @@ public class PlayerControls: MonoBehaviour
     private void Start()
     {
         //finds the game objects, animators, and sets the health
+        //finds the game objects, animators, and sets the health
         UpdateHealthPoints(0);
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         currentHealth = maxHealth;
