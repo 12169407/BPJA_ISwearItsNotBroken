@@ -54,12 +54,8 @@ public class bossController : MonoBehaviour
         //check distance
         var distance = Vector3.Distance(transform.position, target.transform.position);
 
-
         if(distance <= meleeDistance)
-        {
-            //attack melee
-            while(distance <= meleeDistance)
-            {
+        { 
                 randNum01 = Random.Range(1, 4);
                 if (randNum01 == 1)
                 {
@@ -72,8 +68,7 @@ public class bossController : MonoBehaviour
                 if (randNum01 == 3)
                 {
                     anim.SetTrigger("overdrive");
-                }
-            } 
+                } 
         }
         else
         {

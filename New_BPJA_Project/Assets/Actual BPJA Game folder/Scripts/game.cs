@@ -6,11 +6,14 @@ public class game : MonoBehaviour
 {
     GameObject player;
     GameObject enemySpawner;
+    GameObject portal;
     public AudioSource playerAudio;
     public AudioClip playerBkgrnd;
     // Start is called before the first frame update
     void Start()
     {
+        portal = GameObject.FindGameObjectWithTag("Portal");
+        //portal.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
         enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner");
     }
@@ -24,8 +27,8 @@ public class game : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            portal.SetActive(true);
             enemySpawner.GetComponent<enemyWaveGenerator>().readyToSpawn = true;
-            Debug.Log("game has begun!!!!");
             playerAudio.Stop();
             playerAudio.PlayOneShot(playerBkgrnd, 1.0f);
         }
